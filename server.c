@@ -70,14 +70,14 @@ void run_service(int fd)
 
 int main(int argc, char *argv[])
 {
-   if (argc != 2)
-   {
-      perror("Invalid number of arguments\n");
-      exit(1);
-   }
-
+   // if (argc != 2)
+   // {
+   //    perror("Invalid number of arguments\n");
+   //    exit(1);
+   // }
    // verify port
-   int port = atoi(argv[1]);
+   //int port = atoi(argv[1]);
+   int port = 2829;
    if (port < 1024 || port > 65535)
    {
       perror("Invalid port\n");
