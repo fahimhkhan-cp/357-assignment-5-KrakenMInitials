@@ -42,11 +42,12 @@ void send_request(int fd)
 
       // MODIFICATION: Read the echoed response from the server using read()
       bytes_read = read(fd, buffer, sizeof(buffer) - 1);
+      printf("%lu bytes were read\n", bytes_read);
       // MODIFICATION: Check for valid string, format and print
       if (bytes_read > 0)
       {
          buffer[bytes_read] = '\0'; // Null-terminate the string
-         printf("Echo from server: %s", buffer);
+         printf("Echo from server: %s\n", buffer);
       }
    }
 
